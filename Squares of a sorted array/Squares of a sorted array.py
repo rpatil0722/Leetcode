@@ -1,3 +1,5 @@
+#Solution1:
+
 class Solution:
     def sortedSquares(self, nums: List[int]) -> List[int]: 
         n=len(nums)
@@ -15,3 +17,14 @@ class Solution:
             index -= 1
         
         return q
+
+
+******************************************
+#Solution2:
+
+class Solution:
+    def sortedSquares(self, nums: List[int]) -> List[int]:
+        for i in range(0,len(nums)):
+            nums[i]*=nums[i]
+        nums.sort()
+        return nums
